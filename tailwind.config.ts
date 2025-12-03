@@ -2,6 +2,8 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  // Tailwind v4 uses automatic content detection,
+  // so we only extend what we need.
   theme: {
     extend: {
       colors: {

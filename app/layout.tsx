@@ -1,17 +1,17 @@
 // app/layout.tsx
-import './globals.css';
-import type { Metadata } from 'next';
-import { ReactNode } from 'react';
-import { Inter } from 'next/font/google';
-import Link from 'next/link';
-import Image from 'next/image';
+import "./globals.css";
+import type { Metadata } from "next";
+import { ReactNode } from "react";
+import { Inter } from "next/font/google";
+import Link from "next/link";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Savvy GoRilla Foundation',
+  title: "Savvy GoRilla Foundation",
   description:
-    'Savvy GoRilla Foundation – supporting gender equality, youth empowerment, health awareness, and digital literacy in Africa.',
+    "Savvy GoRilla Foundation – supporting gender equality, youth empowerment, health awareness, and digital literacy in Africa.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -19,20 +19,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-black text-white antialiased`}
-      >
+      <body className={`${inter.className} bg-black text-white antialiased`}>
         <div className="flex min-h-screen flex-col">
           {/* HEADER */}
           <header className="sticky top-0 z-30 bg-black/90 backdrop-blur">
-            {/* Rasta strip */}
+            {/* Thin Rasta strip */}
             <div className="h-0.5 bg-gradient-to-r from-rasta-red via-rasta-gold to-rasta-green" />
 
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-              <Link
-                href="/"
-                className="flex items-center gap-3 no-underline"
-              >
+              <Link href="/" className="flex items-center gap-3 no-underline">
                 {/* Logo */}
                 <div className="relative h-9 w-9">
                   <Image

@@ -1,55 +1,55 @@
 // app/page.tsx
-import Link from 'next/link';
+import Link from "next/link";
 
 const pillars = [
   {
-    title: 'Gender Equality & Safety',
+    title: "Gender Equality & Safety",
     description:
-      'Campaigns and conversations that challenge harmful norms and promote safer spaces for women and girls, online and offline.',
+      "Campaigns and conversations that challenge harmful norms and promote safer spaces for women and girls, online and offline.",
   },
   {
-    title: 'Health & Wellbeing',
+    title: "Health & Wellbeing",
     description:
-      'Community awareness on mental health, reproductive health, and everyday wellbeing so people can make informed choices.',
+      "Community awareness on mental health, reproductive health, and everyday wellbeing so people can make informed choices.",
   },
   {
-    title: 'Youth Empowerment',
+    title: "Youth Empowerment",
     description:
-      'Platforms for young Africans to learn, lead, and create—from storytelling labs to leadership and life-skills sessions.',
+      "Platforms for young Africans to learn, lead, and create—from storytelling labs to leadership and life-skills sessions.",
   },
   {
-    title: 'Digital Literacy & Innovation',
+    title: "Digital Literacy & Innovation",
     description:
-      'Practical digital skills and safe internet use, turning phones and laptops into tools for creation, not just consumption.',
+      "Practical digital skills and safe internet use, turning phones and laptops into tools for creation, not just consumption.",
   },
 ];
 
 const initiatives = [
   {
-    label: 'Campaign',
-    title: '16 Voices, One Matriline',
+    label: "Campaign",
+    title: "16 Voices, One Matriline",
     description:
-      'A storytelling series unpacking digital violence, resilience, and solidarity across generations of African women.',
+      "A storytelling series unpacking digital violence, resilience, and solidarity across generations of African women.",
   },
   {
-    label: 'Programme',
-    title: 'Young Minds, Safe Spaces',
+    label: "Programme",
+    title: "Young Minds, Safe Spaces",
     description:
-      'Youth circles that hold space for honest talks on mental health, GBV, identity, and navigating social media.',
+      "Youth circles that hold space for honest talks on mental health, GBV, identity, and navigating social media.",
   },
   {
-    label: 'Training',
-    title: 'Digital Basics for Community Leaders',
+    label: "Training",
+    title: "Digital Basics for Community Leaders",
     description:
-      'Hands-on sessions introducing email, online safety, and collaboration tools to grassroots leaders and organisers.',
+      "Hands-on sessions introducing email, online safety, and collaboration tools to grassroots leaders and organisers.",
   },
 ];
 
 const impactStats = [
-  { label: 'Youth reached (and counting)', value: '150+' },
-  { label: 'Community dialogues held', value: '10+' },
-  { label: 'Core focus areas', value: '4' },
-  { label: 'Partner organisations engaged', value: 'X' },
+  { label: "Youth reached (and counting)", value: "150+" },
+  { label: "Community dialogues held", value: "10+" },
+  { label: "Core focus areas", value: "4" },
+  { label: "Partner organisations engaged", value: "X" },
 ];
 
 export default function HomePage() {
@@ -97,6 +97,7 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* Focus pillars card with subtle Rasta gradient */}
             <div className="space-y-6 rounded-3xl border border-white/10 bg-gradient-to-b from-rasta-red/10 via-black to-rasta-green/10 p-6 backdrop-blur-md">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
                 Focus pillars
@@ -105,22 +106,20 @@ export default function HomePage() {
                 {pillars.map((pillar, index) => (
                   <div
                     key={pillar.title}
-                    className="rounded-2xl border border-white/10 bg-black/60 p-4"
+                    className="rounded-2xl border border-white/10 bg-black/70 p-4"
                   >
                     <div className="flex items-center justify-between">
-                      <h3 className="text-sm font-semibold">
-                        {pillar.title}
-                      </h3>
+                      <h3 className="text-sm font-semibold">{pillar.title}</h3>
                       <span
                         className={[
-                          'h-1.5 w-10 rounded-full',
-                          index === 0 && 'bg-rasta-red',
-                          index === 1 && 'bg-rasta-gold',
-                          index === 2 && 'bg-rasta-green',
-                          index === 3 && 'bg-white',
+                          "h-1.5 w-10 rounded-full",
+                          index === 0 && "bg-rasta-red",
+                          index === 1 && "bg-rasta-gold",
+                          index === 2 && "bg-rasta-green",
+                          index === 3 && "bg-white",
                         ]
                           .filter(Boolean)
-                          .join(' ')}
+                          .join(" ")}
                       />
                     </div>
                     <p className="mt-2 text-xs text-white/70">
@@ -212,19 +211,17 @@ export default function HomePage() {
                   <span>{stat.label}</span>
                   <span
                     className={[
-                      'h-1.5 w-6 rounded-full',
-                      index === 0 && 'bg-rasta-green',
-                      index === 1 && 'bg-rasta-gold',
-                      index === 2 && 'bg-rasta-red',
-                      index === 3 && 'bg-white',
+                      "h-1.5 w-6 rounded-full",
+                      index === 0 && "bg-rasta-green",
+                      index === 1 && "bg-rasta-gold",
+                      index === 2 && "bg-rasta-red",
+                      index === 3 && "bg-white",
                     ]
                       .filter(Boolean)
-                      .join(' ')}
+                      .join(" ")}
                   />
                 </dt>
-                <dd className="mt-3 text-2xl font-semibold">
-                  {stat.value}
-                </dd>
+                <dd className="mt-3 text-2xl font-semibold">{stat.value}</dd>
               </div>
             ))}
           </dl>
