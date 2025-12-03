@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,9 +30,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 href="/"
                 className="flex items-center gap-3 no-underline"
               >
-                <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white text-[11px] font-semibold tracking-[0.16em] uppercase">
-                  SG
+                {/* Logo */}
+                <div className="relative h-9 w-9">
+                  <Image
+                    src="/logos/logo-white.png"
+                    alt="Savvy GoRilla logo"
+                    fill
+                    sizes="36px"
+                    className="object-contain"
+                    priority
+                  />
                 </div>
+
+                {/* Name + tagline */}
                 <div className="leading-tight">
                   <div className="text-sm font-semibold">
                     Savvy GoRilla Foundation
