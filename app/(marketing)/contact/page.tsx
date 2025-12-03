@@ -37,9 +37,8 @@ export default function ContactPage() {
             </h1>
             <p className="text-sm text-white/70 sm:text-base">
               Savvy GoRilla Foundation is intentionally small and hands-on. The
-              best way to reach us is through a clear, thoughtful message –
-              we&apos;ll respond as soon as we can and let you know the next
-              steps.
+              best way to reach us is through a clear, thoughtful message – we
+              will respond as soon as we can and let you know the next steps.
             </p>
             <p className="text-sm text-white/70 sm:text-base">
               As the foundation grows, this page can evolve into a full contact
@@ -62,11 +61,11 @@ export default function ContactPage() {
               <p className="text-sm text-white/70">
                 For now, the easiest way to contact the foundation is by email.
                 You can use one address and simply add a clear subject line such
-                as “Partnership idea – youth circles” or “Story proposal –
-                16 Voices”.
+                as “Partnership idea – youth circles” or “Story proposal – 16
+                Voices”.
               </p>
 
-              <div className="mt-4 rounded-3xl border border-white/15 bg-white/5 p-5 text-sm text-white/85">
+              <div className="mt-4 rounded-3xl border border-white/15 bg-white/5 p-5 text-sm text-white/85 transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:border-rasta-gold/40 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(0,0,0,0.7)]">
                 <p className="font-semibold">Primary contact email</p>
                 <p className="mt-2 text-sm text-rasta-gold">
                   {/* Replace this placeholder with your real address when ready */}
@@ -90,7 +89,7 @@ export default function ContactPage() {
               {contactBlocks.map((block, index) => (
                 <div
                   key={block.title}
-                  className="rounded-3xl border border-white/10 bg-white/5 p-5"
+                  className="rounded-3xl border border-white/10 bg-white/5 p-5 text-sm transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:border-rasta-gold/40 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(0,0,0,0.7)]"
                 >
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="text-sm font-semibold">{block.title}</h3>
@@ -114,7 +113,7 @@ export default function ContactPage() {
                 </div>
               ))}
 
-              <div className="rounded-3xl border border-white/15 bg-black/70 p-5 text-xs text-white/75">
+              <div className="rounded-3xl border border-white/15 bg-black/70 p-5 text-xs text-white/75 transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:border-rasta-red/40 hover:shadow-[0_0_40px_rgba(0,0,0,0.7)]">
                 <p className="font-semibold">Safeguarding &amp; concerns</p>
                 <p className="mt-2">
                   If your message relates to safety, harassment, or
@@ -130,7 +129,7 @@ export default function ContactPage() {
       {/* CTA STRIP */}
       <section>
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
+          <div className="group flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 text-sm sm:flex-row sm:items-center sm:px-10 transition-transform transition-shadow duration-300 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(0,0,0,0.7)]">
             <div>
               <h2 className="text-lg font-semibold sm:text-xl">
                 Ready to reach out?
@@ -144,13 +143,13 @@ export default function ContactPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center justify-center rounded-full bg-rasta-green px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-green/90"
+                className="inline-flex items-center justify-center rounded-full bg-rasta-green px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition-transform transition-shadow duration-300 hover:-translate-y-0.5 hover:bg-rasta-green/90 hover:shadow-[0_0_30px_rgba(4,120,87,0.5)]"
               >
                 See ways to get involved
               </Link>
               <Link
                 href="/stories"
-                className="inline-flex items-center justify-center rounded-full border border-white/80 px-7 py-3 text-sm font-medium text-white/85 transition hover:bg-white hover:text-black"
+                className="inline-flex items-center justify-center rounded-full border border-white/80 px-7 py-3 text-sm font-medium text-white/85 transition-transform transition-shadow duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]"
               >
                 Explore Stories &amp; Voices
               </Link>
