@@ -14,29 +14,35 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const year = new Date().getFullYear();
+
   return (
     <html lang="en">
       <body
         className={`${inter.className} bg-black text-white antialiased`}
       >
         <div className="min-h-screen flex flex-col">
-          <header className="border-b border-white/10">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="h-8 w-8 rounded-full border border-white flex items-center justify-center text-xs font-semibold tracking-widest uppercase">
+          {/* HEADER */}
+          <header className="sticky top-0 z-30 border-b border-white/10 bg-black/80 backdrop-blur">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+              <Link
+                href="/"
+                className="flex items-center gap-3 no-underline"
+              >
+                <div className="flex h-8 w-8 items-center justify-center rounded-full border border-white text-[11px] font-semibold tracking-[0.16em] uppercase">
                   SG
                 </div>
-                <div className="flex flex-col leading-tight">
-                  <span className="text-sm font-semibold">
+                <div className="leading-tight">
+                  <div className="text-sm font-semibold">
                     Savvy GoRilla Foundation
-                  </span>
-                  <span className="text-[11px] text-white/60">
+                  </div>
+                  <div className="text-[11px] text-white/60">
                     Emerging African voices.
-                  </span>
+                  </div>
                 </div>
               </Link>
 
-              <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
+              <nav className="hidden items-center gap-6 text-xs font-medium text-white/70 md:flex">
                 <Link href="/about" className="hover:text-white">
                   About
                 </Link>
@@ -56,17 +62,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </header>
 
+          {/* MAIN CONTENT */}
           <main className="flex-1">{children}</main>
 
+          {/* FOOTER */}
           <footer className="border-t border-white/10">
-            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
               <p>
-                © {new Date().getFullYear()} Savvy GoRilla Foundation. Part of
-                the Savvy Gorilla ecosystem.
+                © {year} Savvy GoRilla Foundation. Part of the Savvy Gorilla
+                ecosystem.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 <span>Gender equality</span>
                 <span>Youth empowerment</span>
+                <span>Health awareness</span>
                 <span>Digital literacy</span>
               </div>
             </div>
