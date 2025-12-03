@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${inter.className} bg-black text-white antialiased`}
       >
-        <div className="min-h-screen flex flex-col">
+        <div className="flex min-h-screen flex-col">
           {/* HEADER */}
           <header className="sticky top-0 z-30 border-b border-white/10 bg-black/80 backdrop-blur">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
@@ -43,19 +43,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </Link>
 
               <nav className="hidden items-center gap-6 text-xs font-medium text-white/70 md:flex">
-                <Link href="/about" className="hover:text-white">
+                <Link href="/about" className="no-underline hover:text-white">
                   About
                 </Link>
-                <Link href="/work" className="hover:text-white">
+                <Link href="/work" className="no-underline hover:text-white">
                   Our Work
                 </Link>
-                <Link href="/stories" className="hover:text-white">
+                <Link
+                  href="/stories"
+                  className="no-underline hover:text-white"
+                >
                   Stories &amp; Voices
                 </Link>
-                <Link href="/get-involved" className="hover:text-white">
+                <Link
+                  href="/get-involved"
+                  className="no-underline hover:text-white"
+                >
                   Get Involved
                 </Link>
-                <Link href="/contact" className="hover:text-white">
+                <Link href="/contact" className="no-underline hover:text-white">
                   Contact
                 </Link>
               </nav>

@@ -57,7 +57,7 @@ export default function HomePage() {
     <div className="bg-black text-white">
       {/* HERO */}
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)] lg:items-center">
             <div className="space-y-8">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
@@ -75,13 +75,13 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/get-involved"
-                  className="rounded-full border border-white bg-white px-6 py-2 text-sm font-medium text-black transition hover:bg-black hover:text-white"
+                  className="inline-flex items-center justify-center rounded-full border border-white bg-white px-6 py-2 text-sm font-medium text-black no-underline transition hover:bg-black hover:text-white"
                 >
                   Support a project
                 </Link>
                 <Link
                   href="/work"
-                  className="rounded-full border border-white/40 px-6 py-2 text-sm font-medium text-white/80 hover:border-white hover:text-white"
+                  className="inline-flex items-center justify-center rounded-full border border-white/60 px-6 py-2 text-sm font-medium text-white/90 no-underline transition hover:border-white hover:text-white"
                 >
                   Explore our work
                 </Link>
@@ -124,7 +124,7 @@ export default function HomePage() {
 
       {/* FEATURED INITIATIVES */}
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
               <h2 className="text-xl font-semibold sm:text-2xl">
@@ -138,7 +138,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/work"
-              className="text-sm font-medium text-white/80 underline underline-offset-4 hover:text-white"
+              className="text-sm font-medium text-white/80 underline underline-offset-4"
             >
               View all focus areas
             </Link>
@@ -172,7 +172,7 @@ export default function HomePage() {
 
       {/* IMPACT SNAPSHOT */}
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
               <h2 className="text-xl font-semibold sm:text-2xl">
@@ -204,7 +204,7 @@ export default function HomePage() {
 
       {/* VOICES FROM THE COMMUNITY */}
       <section className="border-b border-white/10">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="text-xl font-semibold sm:text-2xl">
@@ -218,7 +218,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/stories"
-              className="text-sm font-medium text-white/80 underline underline-offset-4 hover:text-white"
+              className="text-sm font-medium text-white/80 underline underline-offset-4"
             >
               Explore stories
             </Link>
@@ -259,7 +259,7 @@ export default function HomePage() {
 
       {/* CTA STRIP */}
       <section>
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-white/10 via-white/5 to-transparent px-6 py-8 sm:flex-row sm:items-center sm:px-10">
             <div>
               <h2 className="text-lg font-semibold sm:text-xl">
@@ -274,13 +274,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/get-involved"
-                className="rounded-full border border-white bg-white px-6 py-2 text-sm font-medium text-black transition hover:bg-black hover:text-white"
+                className="inline-flex items-center justify-center rounded-full border border-white bg-white px-6 py-2 text-sm font-medium text-black no-underline transition hover:bg-black hover:text-white"
               >
                 Get involved
               </Link>
               <Link
                 href="/contact"
-                className="rounded-full border border-white/40 px-6 py-2 text-sm font-medium text-white/80 hover:border-white hover:text-white"
+                className="inline-flex items-center justify-center rounded-full border border-white/60 px-6 py-2 text-sm font-medium text-white/90 no-underline transition hover:border-white hover:text-white"
               >
                 Talk to us
               </Link>
