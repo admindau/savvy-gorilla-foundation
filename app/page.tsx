@@ -1,65 +1,293 @@
-import Image from "next/image";
+// app/page.tsx
+import Link from 'next/link';
 
-export default function Home() {
+const pillars = [
+  {
+    title: 'Gender Equality & Safety',
+    description:
+      'Campaigns and conversations that challenge harmful norms and promote safer spaces for women and girls, online and offline.',
+  },
+  {
+    title: 'Health & Wellbeing',
+    description:
+      'Community awareness on mental health, reproductive health, and everyday wellbeing so people can make informed choices.',
+  },
+  {
+    title: 'Youth Empowerment',
+    description:
+      'Platforms for young Africans to learn, lead, and create—from storytelling labs to leadership and life-skills sessions.',
+  },
+  {
+    title: 'Digital Literacy & Innovation',
+    description:
+      'Practical digital skills and safe internet use, turning phones and laptops into tools for creation, not just consumption.',
+  },
+];
+
+const initiatives = [
+  {
+    label: 'Campaign',
+    title: '16 Voices, One Matriline',
+    description:
+      'A storytelling series unpacking digital violence, resilience, and solidarity across generations of African women.',
+  },
+  {
+    label: 'Programme',
+    title: 'Young Minds, Safe Spaces',
+    description:
+      'Youth circles that hold space for honest talks on mental health, GBV, identity, and navigating social media.',
+  },
+  {
+    label: 'Training',
+    title: 'Digital Basics for Community Leaders',
+    description:
+      'Hands-on sessions introducing email, online safety, and collaboration tools to grassroots leaders and organisers.',
+  },
+];
+
+const impactStats = [
+  { label: 'Youth reached (and counting)', value: '150+' },
+  { label: 'Community dialogues held', value: '10+' },
+  { label: 'Core focus areas', value: '4' },
+  { label: 'Partner organisations engaged', value: 'X' },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="bg-black text-white">
+      {/* HERO */}
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)] lg:items-center">
+            <div className="space-y-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
+                Savvy GoRilla Foundation
+              </p>
+              <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+                Building safer, healthier, more digital futures in Africa.
+              </h1>
+              <p className="max-w-xl text-sm text-white/70 sm:text-base">
+                We support community-led initiatives in gender equality, health
+                awareness, youth empowerment, and digital literacy—starting in
+                South Sudan and reaching across the continent. Stories, skills,
+                and technology working together for social impact.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/get-involved"
+                  className="rounded-full border border-white bg-white px-6 py-2 text-sm font-medium text-black transition hover:bg-black hover:text-white"
+                >
+                  Support a project
+                </Link>
+                <Link
+                  href="/work"
+                  className="rounded-full border border-white/40 px-6 py-2 text-sm font-medium text-white/80 hover:border-white hover:text-white"
+                >
+                  Explore our work
+                </Link>
+              </div>
+              <div className="flex flex-wrap gap-4 text-xs text-white/60">
+                <span>Gender equality.</span>
+                <span>Youth voices.</span>
+                <span>Digital literacy.</span>
+                <span>Pan-African impact.</span>
+              </div>
+            </div>
+
+            <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
+                Focus pillars
+              </p>
+              <div className="space-y-4">
+                {pillars.map((pillar) => (
+                  <div
+                    key={pillar.title}
+                    className="rounded-2xl border border-white/10 bg-black/40 p-4"
+                  >
+                    <h3 className="text-sm font-semibold">
+                      {pillar.title}
+                    </h3>
+                    <p className="mt-2 text-xs text-white/70">
+                      {pillar.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-[11px] text-white/50">
+                Grounded in South Sudan. Connected to Africa&apos;s wider
+                story.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* FEATURED INITIATIVES */}
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+            <div>
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                Initiatives at the heart of our work.
+              </h2>
+              <p className="mt-3 max-w-xl text-sm text-white/70">
+                From storytelling campaigns to youth spaces and digital skills
+                trainings, each initiative responds to real needs raised by the
+                communities we work with.
+              </p>
+            </div>
+            <Link
+              href="/work"
+              className="text-sm font-medium text-white/80 underline underline-offset-4 hover:text-white"
+            >
+              View all focus areas
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {initiatives.map((item) => (
+              <div
+                key={item.title}
+                className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
+              >
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50">
+                    {item.label}
+                  </p>
+                  <h3 className="mt-2 text-sm font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-xs text-white/70">
+                    {item.description}
+                  </p>
+                </div>
+                <div className="mt-4 text-xs text-white/60">
+                  Coming soon: impact notes &amp; stories from the field.
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* IMPACT SNAPSHOT */}
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+            <div>
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                Early impact &amp; growing reach.
+              </h2>
+              <p className="mt-3 max-w-lg text-sm text-white/70">
+                These numbers are placeholders you can keep updating as the
+                foundation grows—capturing youth reached, dialogues held, and
+                partnerships formed.
+              </p>
+            </div>
+          </div>
+
+          <dl className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {impactStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-3xl border border-white/10 bg-white/5 p-5"
+              >
+                <dt className="text-xs text-white/60">{stat.label}</dt>
+                <dd className="mt-3 text-2xl font-semibold">
+                  {stat.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* VOICES FROM THE COMMUNITY */}
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                Stories &amp; voices.
+              </h2>
+              <p className="mt-3 max-w-xl text-sm text-white/70">
+                We believe change starts when people feel safe enough to speak.
+                Our campaigns and podcasts amplify lived experiences while
+                protecting dignity and privacy.
+              </p>
+            </div>
+            <Link
+              href="/stories"
+              className="text-sm font-medium text-white/80 underline underline-offset-4 hover:text-white"
+            >
+              Explore stories
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-5">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50">
+                Digital safety
+              </p>
+              <h3 className="mt-2 text-sm font-semibold">
+                “I thought it was just online… until it changed how I saw
+                myself.”
+              </h3>
+              <p className="mt-3 text-xs text-white/70">
+                A young woman from Juba shares how constant online harassment
+                shaped her confidence—and what changed when she found a
+                supportive community willing to listen.
+              </p>
+            </article>
+
+            <article className="rounded-3xl border border-white/10 bg-white/5 p-5">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50">
+                Youth &amp; mental health
+              </p>
+              <h3 className="mt-2 text-sm font-semibold">
+                “We were told to be strong. No one taught us how to be honest.”
+              </h3>
+              <p className="mt-3 text-xs text-white/70">
+                A youth circle reflection on masculinity, emotions, and what it
+                means for young men to stand as allies against GBV in their
+                communities.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA STRIP */}
+      <section>
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-white/10 via-white/5 to-transparent px-6 py-8 sm:flex-row sm:items-center sm:px-10">
+            <div>
+              <h2 className="text-lg font-semibold sm:text-xl">
+                Ready to support community-led change?
+              </h2>
+              <p className="mt-2 max-w-xl text-sm text-white/70">
+                Partner with us, sponsor a campaign, or share your skills. From
+                storytelling to digital training, there&apos;s always room at
+                the table.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/get-involved"
+                className="rounded-full border border-white bg-white px-6 py-2 text-sm font-medium text-black transition hover:bg-black hover:text-white"
+              >
+                Get involved
+              </Link>
+              <Link
+                href="/contact"
+                className="rounded-full border border-white/40 px-6 py-2 text-sm font-medium text-white/80 hover:border-white hover:text-white"
+              >
+                Talk to us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
