@@ -1,166 +1,160 @@
 // app/(marketing)/stories/page.tsx
 import Link from "next/link";
 
-const series = [
+const campaigns = [
   {
-    slug: "16-voices-one-matriline",
     label: "Campaign",
     title: "16 Voices, One Matriline",
     description:
-      "A digital storytelling campaign where women, girls, and allies speak honestly about online harassment, GBV, and resilience.",
-    highlight:
-      "Built for the 16 Days of Activism – rooted in South Sudan, echoing across Africa.",
-    tagColor: "bg-rasta-gold",
+      "A storytelling series unpacking digital violence, resilience, and solidarity across generations of African women.",
+    status: "Launching in phases during the 16 Days of Activism.",
   },
   {
-    slug: "youth-minds-safe-spaces",
-    label: "Youth circles",
-    title: "Young Minds, Safe Spaces",
-    description:
-      "Reflections from youth circles on mental health, masculinity, identity, and what it means to stand as allies.",
-    highlight:
-      "Creating room for boys and young men to unlearn harmful norms and choose courage instead.",
-    tagColor: "bg-rasta-green",
-  },
-  {
-    slug: "our-matriline-podcast",
     label: "Podcast",
-    title: "Our Matriline Podcast",
+    title: "Our Matriline",
     description:
-      "Conversations held by African women about girlhood, womanhood, intergenerational healing, and digital life.",
-    highlight:
-      "Stories that honour mothers, aunties, sisters, and daughters across the continent.",
-    tagColor: "bg-rasta-red",
+      "Conversations held by women, for women – tracing stories from girlhood to womanhood across cultures and borders.",
+    status: "Stories shared with consent, care, and boundaries.",
+  },
+  {
+    label: "Series",
+    title: "Voices from the Timeline",
+    description:
+      "Short digital stories on how online harassment, misinformation, and pressure show up in everyday life.",
+    status: "Designed to spark honest conversations and safer habits online.",
   },
 ];
 
-const voicePreviews = [
+const voicesWeCenter = [
   {
-    id: 1,
-    role: "Host voice",
-    name: "Achom – ‘The Facebook pokes’",
-    summary:
-      "A funny but honest story about how constant ‘hi hi hi’ messages, pokes, and online stalking slowly turned from annoying to unsafe.",
-    themeTags: ["Digital harassment", "Boundaries", "Humour"],
+    title: "Women & girls navigating digital spaces",
+    description:
+      "From Facebook inboxes to WhatsApp groups and TikTok trends – we listen to how online life shapes self-worth, safety, and opportunity.",
   },
   {
-    id: 2,
-    role: "Host voice",
-    name: "Doris – ‘The view once surprise’",
-    summary:
-      "A ‘view once’ message that turned into an unsolicited nude – and what it taught her about consent and courage.",
-    themeTags: ["Consent", "Unsolicited nudes", "Self-respect"],
+    title: "Male allies willing to reflect",
+    description:
+      "Men who are ready to unlearn harmful norms, speak up among peers, and model different ways of holding power.",
   },
   {
-    id: 3,
-    role: "Ally voice",
-    name: "Dau – ‘Learning to listen as a man’",
-    summary:
-      "Reflections on masculinity, ego, and what shifted when he began to truly listen to women’s experiences online and offline.",
-    themeTags: ["Male allyship", "Masculinity", "Listening"],
-  },
-  {
-    id: 4,
-    role: "Ally voice",
-    name: "Majok – ‘GBV is not distant’",
-    summary:
-      "A reminder that violence is not only physical – it lives in our jokes, comments, and the silence of men who say nothing.",
-    themeTags: ["Accountability", "Everyday violence", "Digital safety"],
+    title: "Youth on the frontline of change",
+    description:
+      "Young Africans building new cultures of care, consent, and community – both on-screen and offline.",
   },
 ];
 
-const themes = [
-  "Online harassment & digital violence",
-  "Consent, safety, and boundaries",
-  "Masculinity, allyship, and unlearning",
-  "Mental health and emotional honesty",
-  "Pan-African girlhood and womanhood",
-  "Community care and solidarity",
+const storyPractices = [
+  "We seek consent before, during, and after the storytelling process.",
+  "We avoid graphic detail when it risks retraumatising the storyteller or audience.",
+  "We prioritise anonymity when safety, privacy, or comfort require it.",
+  "We share resources and referral options where possible – not just the story.",
 ];
 
 export default function StoriesPage() {
   return (
     <div className="bg-black text-white">
       {/* HERO */}
-      <section className="border-b border-white/10">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-          <div className="max-w-3xl space-y-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rasta-gold">
-              Stories &amp; Voices
-            </p>
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Stories that tell the truth and still hold dignity.
-            </h1>
-            <p className="text-sm text-white/70 sm:text-base">
-              Savvy GoRilla Foundation uses storytelling as a tool for healing,
-              visibility, and change. These are not just “case studies” – they
-              are real experiences from women, girls, and allies navigating
-              digital spaces, mental health, and everyday safety.
-            </p>
-            <p className="text-sm text-white/70 sm:text-base">
-              Our promise: we do not sensationalise pain. We tell stories with
-              consent, care, and intention – centring the people behind the
-              words.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-2">
-              <a
-                href="#sixteen-voices"
-                className="inline-flex items-center justify-center rounded-full bg-rasta-gold px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-gold/90"
-              >
-                Read 16 Voices series
-              </a>
-              <Link
-                href="/work"
-                className="inline-flex items-center justify-center rounded-full border border-rasta-green px-7 py-3 text-sm font-medium text-rasta-green transition hover:bg-rasta-green hover:text-black"
-              >
-                See how stories shape our work
-              </Link>
+      <section className="border-b border-white/10 bg-gradient-to-b from-black via-[#110305] to-black">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1.2fr)] lg:items-center">
+            {/* Left: intro */}
+            <div className="space-y-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rasta-gold">
+                Stories &amp; Voices
+              </p>
+              <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+                Stories that tell the truth and still hold dignity.
+              </h1>
+              <p className="max-w-xl text-sm text-white/70 sm:text-base">
+                Savvy GoRilla Foundation uses storytelling as a tool for
+                healing, visibility, and change. These are not just “case
+                studies” – they are real experiences from women, girls, and
+                allies navigating digital spaces, mental health, and everyday
+                safety.
+              </p>
+              <p className="max-w-xl text-sm text-white/70 sm:text-base">
+                Our promise: we do not sensationalise pain. We tell stories with
+                consent, care, and intention – centring the people behind the
+                words.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap items-center gap-4">
+                <Link
+                  href="/work"
+                  className="inline-flex items-center justify-center rounded-full bg-rasta-gold px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-gold/90 hover:shadow-black/60"
+                >
+                  See how stories shape our work
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full border border-rasta-green px-7 py-3 text-sm font-medium text-rasta-green transition hover:bg-rasta-green hover:text-black"
+                >
+                  Share a story or idea
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: small explainer card */}
+            <div className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.65)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-rasta-gold/80 hover:bg-white/10">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+                Why stories?
+              </p>
+              <p className="text-sm text-white/80">
+                Stories cut through jargon and reports. They remind us that
+                policies, programmes, and platforms all land in real people&apos;s
+                lives. When told well, stories can soften hearts, influence
+                decisions, and open up safer spaces for others to speak.
+              </p>
+              <p className="text-xs text-white/60">
+                Every story we share is part of a bigger liberation journey –
+                for individuals, communities, and the continent.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERIES OVERVIEW */}
+      {/* CAMPAIGNS & SERIES */}
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
               <h2 className="text-xl font-semibold sm:text-2xl">
                 Campaigns and series under Stories &amp; Voices.
               </h2>
-              <p className="mt-3 max-w-2xl text-sm text-white/70">
-                These strands hold the different ways we share stories – written
-                pieces, voice notes, animations, and podcast episodes. Each one
-                can live on social media, YouTube, or here on the website.
+              <p className="mt-3 max-w-xl text-sm text-white/70">
+                These are starting points – each campaign can grow into workshops,
+                digital content, or youth-led actions as partners come on board.
               </p>
             </div>
-            <p className="text-xs text-white/60">
-              All content is shared with consent and with safety in mind.
-            </p>
+            <Link
+              href="/get-involved"
+              className="text-sm font-medium text-rasta-gold underline underline-offset-4"
+            >
+              Explore ways to collaborate
+            </Link>
           </div>
 
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {series.map((item) => (
+            {campaigns.map((campaign) => (
               <article
-                key={item.slug}
-                className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
+                key={campaign.title}
+                className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.65)] transition duration-300 hover:-translate-y-1 hover:border-rasta-gold/80 hover:bg-white/10"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/60">
-                      {item.label}
-                    </p>
-                    <span
-                      className={`h-1.5 w-10 rounded-full ${item.tagColor}`}
-                    />
-                  </div>
-                  <h3 className="mt-2 text-sm font-semibold">{item.title}</h3>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
+                    {campaign.label}
+                  </p>
+                  <h3 className="mt-2 text-sm font-semibold">
+                    {campaign.title}
+                  </h3>
                   <p className="mt-3 text-xs text-white/70">
-                    {item.description}
+                    {campaign.description}
                   </p>
                 </div>
                 <p className="mt-4 text-[11px] text-white/60">
-                  {item.highlight}
+                  {campaign.status}
                 </p>
               </article>
             ))}
@@ -168,158 +162,105 @@ export default function StoriesPage() {
         </div>
       </section>
 
-      {/* 16 VOICES HIGHLIGHT */}
-      <section
-        id="sixteen-voices"
-        className="border-b border-white/10 bg-gradient-to-b from-rasta-red/10 via-black to-rasta-green/10"
-      >
+      {/* VOICES WE CENTRE */}
+      <section className="border-b border-white/10 bg-gradient-to-b from-black via-[#050b04] to-black">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1.3fr)] lg:items-start">
-            <div className="space-y-4">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
-                16 Voices, One Matriline
-              </p>
-              <h2 className="text-xl font-semibold sm:text-2xl">
-                A chorus of voices speaking against digital violence.
-              </h2>
-              <p className="text-sm text-white/70">
-                16 Voices, One Matriline is a storytelling campaign created for
-                the 16 Days of Activism. Each “voice” is a short, powerful
-                reflection from a woman, girl, or ally about how digital
-                violence has touched their life – and how they are responding.
-              </p>
-              <p className="text-sm text-white/70">
-                Some pieces are serious, some are humorous, but all are honest.
-                Together they show that digital violence is not just a “social
-                media problem” – it sits inside culture, gender norms, and the
-                way we treat each other.
-              </p>
-              <div className="mt-4 rounded-3xl border border-white/15 bg-black/60 p-5 text-xs text-white/80">
-                <p className="font-semibold">
-                  How this series can grow on the website:
+          <div className="max-w-2xl">
+            <h2 className="text-xl font-semibold sm:text-2xl">
+              Whose voices do we centre?
+            </h2>
+            <p className="mt-3 text-sm text-white/70">
+              We prioritise people whose experiences are often dismissed,
+              mocked, or misunderstood – especially in online spaces and
+              conversations about gender, power, and mental health.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {voicesWeCenter.map((voice) => (
+              <div
+                key={voice.title}
+                className="rounded-3xl border border-white/10 bg-black/70 p-5 shadow-[0_16px_35px_rgba(0,0,0,0.7)] transition duration-300 hover:-translate-y-1 hover:border-rasta-green/80"
+              >
+                <h3 className="text-sm font-semibold">{voice.title}</h3>
+                <p className="mt-3 text-xs text-white/70">
+                  {voice.description}
                 </p>
-                <ul className="mt-2 space-y-1.5">
-                  <li className="flex gap-2">
-                    <span className="mt-1 h-1 w-1 rounded-full bg-rasta-gold" />
-                    <span>
-                      Each voice can have its own page or embed (text, audio, or
-                      animation).
-                    </span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="mt-1 h-1 w-1 rounded-full bg-rasta-gold" />
-                    <span>
-                      We can group voices by theme – survivors, youth, male
-                      allies, etc.
-                    </span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="mt-1 h-1 w-1 rounded-full bg-rasta-gold" />
-                    <span>
-                      Future seasons can expand beyond the 16 Days, archiving a
-                      living library of African digital experiences.
-                    </span>
-                  </li>
-                </ul>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STORY PRACTICES */}
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start">
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold sm:text-2xl">
+                How we tell stories safely.
+              </h2>
+              <p className="max-w-xl text-sm text-white/70">
+                Storytelling around GBV, mental health, and digital violence
+                requires care. We follow simple principles to protect both the
+                storyteller and those listening.
+              </p>
+
+              <ul className="mt-4 space-y-3 text-sm text-white/80">
+                {storyPractices.map((practice) => (
+                  <li key={practice} className="flex gap-3">
+                    <span className="mt-1 inline-block h-2 w-2 flex-none rounded-full bg-rasta-gold" />
+                    <span className="text-xs sm:text-sm">{practice}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="space-y-4 rounded-3xl border border-white/10 bg-black/70 p-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/60">
-                Sample voices from the series
+            <div className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.65)] transition duration-300 hover:-translate-y-1 hover:border-rasta-red/80 hover:bg-white/10">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+                Safeguarding &amp; boundaries
               </p>
-              <div className="space-y-4">
-                {voicePreviews.map((voice) => (
-                  <article
-                    key={voice.id}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-4"
-                  >
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
-                      {voice.role}
-                    </p>
-                    <h3 className="mt-1 text-sm font-semibold">
-                      {voice.name}
-                    </h3>
-                    <p className="mt-2 text-xs text-white/70">
-                      {voice.summary}
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {voice.themeTags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full bg-black/60 px-2 py-1 text-[10px] text-white/70"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </article>
-                ))}
-              </div>
-              <p className="pt-1 text-[11px] text-white/60">
-                These are examples. As we publish the full 16 voices, each one
-                can link out to its own page, animation, or audio clip.
+              <p className="text-sm text-white/80">
+                Some stories are not meant for public timelines. When a story
+                feels too raw, risky, or identifying, we may keep it within
+                closed circles, anonymise it heavily, or not share it at all.
+              </p>
+              <p className="text-xs text-white/60">
+                Our goal is not to collect every story. Our goal is to honour
+                the people who trust us with theirs.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* THEMES & INVITE */}
+      {/* CTA STRIP */}
       <section>
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1.4fr)] lg:items-start">
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold sm:text-2xl">
-                What our stories talk about.
+          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
+            <div>
+              <h2 className="text-lg font-semibold sm:text-xl">
+                Want to build a campaign or series with us?
               </h2>
-              <p className="text-sm text-white/70">
-                Across campaigns, podcasts, and youth spaces, some themes keep
-                repeating. They show us where the pain is – and where the
-                healing can begin.
+              <p className="mt-2 max-w-xl text-sm text-white/80">
+                From digital safety animations to community dialogues and
+                podcast-style storytelling, we&apos;re open to collaborations
+                that put dignity first.
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-white/75">
-                {themes.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-4 rounded-full bg-rasta-gold" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
-
-            <div className="rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/25 via-rasta-gold/20 to-rasta-green/25 px-6 py-6 text-sm text-white/85 sm:px-8 sm:py-8">
-              <h3 className="text-base font-semibold sm:text-lg">
-                Want to share a story or host a listening space?
-              </h3>
-              <p className="mt-3 text-sm text-white/80">
-                Stories &amp; Voices is not a one-way platform. We can co-create
-                storytelling sessions, digital safety conversations, or podcast
-                recordings with your organisation, school, or community group.
-              </p>
-              <p className="mt-3 text-sm text-white/80">
-                Whether it&apos;s a youth group in Juba, a women&apos;s savings
-                circle, or a university class elsewhere on the continent, we are
-                open to collaboration.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                <Link
-                  href="/get-involved"
-                  className="inline-flex items-center justify-center rounded-full bg-rasta-green px-6 py-2.5 text-xs font-semibold text-black shadow shadow-black/40 transition hover:bg-rasta-green/90"
-                >
-                  Co-create a storytelling session
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full border border-rasta-gold px-6 py-2.5 text-xs font-medium text-rasta-gold transition hover:bg-rasta-gold hover:text-black"
-                >
-                  Contact the Stories &amp; Voices team
-                </Link>
-              </div>
-              <p className="mt-4 text-[11px] text-white/75">
-                All collaborations follow our safeguarding and consent
-                principles. No story is shared without care.
-              </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/get-involved"
+                className="inline-flex items-center justify-center rounded-full bg-rasta-green px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-green/90"
+              >
+                Explore collaboration ideas
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-rasta-gold px-7 py-3 text-sm font-medium text-rasta-gold transition hover:bg-rasta-gold hover:text-black"
+              >
+                Start a conversation
+              </Link>
             </div>
           </div>
         </div>
