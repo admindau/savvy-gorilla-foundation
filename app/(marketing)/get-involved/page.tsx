@@ -193,6 +193,91 @@ export default function GetInvolvedPage() {
           </div>
         </div>
       </section>
+
+      {/* DONATION / SUPPORT STRIP */}
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
+            <div className="space-y-3">
+              <h2 className="text-lg font-semibold sm:text-xl">
+                Support the work financially.
+              </h2>
+              <p className="max-w-xl text-sm text-white/80">
+                If you’d like to contribute directly to Savvy GoRilla
+                Foundation, you can start with a simple transfer. As the
+                foundation grows, this section can evolve into a full donations
+                page or online giving platform.
+              </p>
+              <div className="mt-3 rounded-2xl border border-white/20 bg-black/60 p-4 text-xs text-white/80">
+                <p className="font-semibold">Bank / mobile money details</p>
+                <p className="mt-2 text-white/70">
+                  Replace these placeholders with your official details when
+                  ready:
+                </p>
+                <ul className="mt-2 space-y-1">
+                  <li>Account name: <span className="text-white">Savvy GoRilla Foundation</span></li>
+                  <li>Bank: <span className="text-white/70">[Your bank name here]</span></li>
+                  <li>Account number / IBAN: <span className="text-white/70">[To be added]</span></li>
+                  <li>Mobile money: <span className="text-white/70">[MTN / Zain details, if applicable]</span></li>
+                  <li>Reference: <span className="text-white/70">“Foundation support”</span></li>
+                </ul>
+                <p className="mt-3 text-[11px] text-white/60">
+                  Once these details are confirmed, you can also share them in
+                  your email signatures, social media, and campaign materials.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 text-xs text-white/80">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-white/70">
+                Transparency
+              </p>
+              <p>
+                We aim to keep finances simple and accountable. Donors can
+                request a brief summary of how funds are used across campaigns
+                and programmes.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full bg-rasta-green px-7 py-3 text-xs font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-green/90"
+              >
+                Ask about funding or reporting
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA STRIP */}
+      <section>
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
+            <div>
+              <h2 className="text-lg font-semibold sm:text-xl">
+                Ready to support community-led change?
+              </h2>
+              <p className="mt-2 max-w-xl text-sm text-white/80">
+                Partner with us, sponsor a campaign, or share your skills. From
+                storytelling to digital training, there&apos;s always room at
+                the table.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/get-involved"
+                className="inline-flex items-center justify-center rounded-full bg-rasta-green px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-green/90"
+              >
+                Get involved
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-rasta-gold px-7 py-3 text-sm font-medium text-rasta-gold transition hover:bg-rasta-gold hover:text-black"
+              >
+                Talk to us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
