@@ -27,7 +27,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="h-0.5 bg-gradient-to-r from-rasta-red via-rasta-gold to-rasta-green" />
 
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-              <Link href="/" className="flex items-center gap-3 no-underline">
+              <Link
+                href="/"
+                className="flex items-center gap-3 no-underline hover:no-underline"
+              >
                 {/* Logo */}
                 <div className="relative h-9 w-9">
                   <Image
@@ -35,7 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     alt="Savvy GoRilla logo"
                     fill
                     sizes="36px"
-                    className="object-contain"
+                    className="object-contain drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]"
                     priority
                   />
                 </div>
@@ -52,36 +55,22 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </Link>
 
               <nav className="hidden items-center gap-6 text-xs font-medium text-white/70 md:flex">
-                <Link
-                  href="/about"
-                  className="no-underline hover:text-rasta-gold"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/work"
-                  className="no-underline hover:text-rasta-gold"
-                >
-                  Our Work
-                </Link>
-                <Link
-                  href="/stories"
-                  className="no-underline hover:text-rasta-gold"
-                >
-                  Stories &amp; Voices
-                </Link>
-                <Link
-                  href="/get-involved"
-                  className="no-underline hover:text-rasta-gold"
-                >
-                  Get Involved
-                </Link>
-                <Link
-                  href="/contact"
-                  className="no-underline hover:text-rasta-gold"
-                >
-                  Contact
-                </Link>
+                {[
+                  { href: "/about", label: "About" },
+                  { href: "/work", label: "Our Work" },
+                  { href: "/stories", label: "Stories & Voices" },
+                  { href: "/get-involved", label: "Get Involved" },
+                  { href: "/contact", label: "Contact" },
+                ].map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="relative no-underline transition-colors duration-200 hover:text-rasta-gold"
+                  >
+                    <span className="relative z-10">{item.label}</span>
+                    <span className="pointer-events-none absolute inset-x-0 -bottom-1 h-px origin-center scale-x-0 bg-gradient-to-r from-rasta-red via-rasta-gold to-rasta-green opacity-80 transition-transform duration-200 group-hover:scale-x-100 md:block" />
+                  </Link>
+                ))}
               </nav>
             </div>
           </header>

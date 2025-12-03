@@ -56,7 +56,7 @@ export default function HomePage() {
   return (
     <div className="bg-black text-white">
       {/* HERO */}
-      <section className="border-b border-white/10">
+      <section className="soft-rasta-bg border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)] lg:items-center">
             <div className="space-y-8">
@@ -77,13 +77,13 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/get-involved"
-                  className="inline-flex items-center justify-center rounded-full bg-rasta-gold px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-gold/90"
+                  className="inline-flex items-center justify-center rounded-full bg-rasta-gold px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition-transform duration-200 hover:-translate-y-0.5 hover:bg-rasta-gold/90 hover:shadow-2xl hover:shadow-black/70"
                 >
                   Support a project
                 </Link>
                 <Link
                   href="/work"
-                  className="inline-flex items-center justify-center rounded-full border border-rasta-green px-7 py-3 text-sm font-medium text-rasta-green transition hover:bg-rasta-green hover:text-black"
+                  className="inline-flex items-center justify-center rounded-full border border-rasta-green px-7 py-3 text-sm font-medium text-rasta-green transition-transform duration-200 hover:-translate-y-0.5 hover:bg-rasta-green hover:text-black hover:shadow-xl hover:shadow-black/70"
                 >
                   Explore our work
                 </Link>
@@ -98,7 +98,7 @@ export default function HomePage() {
             </div>
 
             {/* Focus pillars card with subtle Rasta gradient */}
-            <div className="space-y-6 rounded-3xl border border-white/10 bg-gradient-to-b from-rasta-red/10 via-black to-rasta-green/10 p-6 backdrop-blur-md">
+            <div className="card-hover space-y-6 rounded-3xl border border-white/10 bg-gradient-to-b from-rasta-red/10 via-black to-rasta-green/10 p-6 backdrop-blur-md">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
                 Focus pillars
               </p>
@@ -106,13 +106,13 @@ export default function HomePage() {
                 {pillars.map((pillar, index) => (
                   <div
                     key={pillar.title}
-                    className="rounded-2xl border border-white/10 bg-black/70 p-4"
+                    className="card-hover rounded-2xl border border-white/10 bg-black/70 p-4"
                   >
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-semibold">{pillar.title}</h3>
                       <span
                         className={[
-                          "h-1.5 w-10 rounded-full",
+                          "rasta-pulse h-1.5 w-10 rounded-full",
                           index === 0 && "bg-rasta-red",
                           index === 1 && "bg-rasta-gold",
                           index === 2 && "bg-rasta-green",
@@ -163,7 +163,7 @@ export default function HomePage() {
             {initiatives.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
+                className="card-hover flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
               >
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
@@ -205,13 +205,13 @@ export default function HomePage() {
             {impactStats.map((stat, index) => (
               <div
                 key={stat.label}
-                className="rounded-3xl border border-white/10 bg-black/70 p-5"
+                className="card-hover rounded-3xl border border-white/10 bg-black/70 p-5"
               >
                 <dt className="flex items-center justify-between text-xs text-white/60">
                   <span>{stat.label}</span>
                   <span
                     className={[
-                      "h-1.5 w-6 rounded-full",
+                      "rasta-pulse h-1.5 w-6 rounded-full",
                       index === 0 && "bg-rasta-green",
                       index === 1 && "bg-rasta-gold",
                       index === 2 && "bg-rasta-red",
@@ -251,7 +251,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <article className="card-hover rounded-3xl border border-white/10 bg-white/5 p-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
                 Digital safety
               </p>
@@ -266,7 +266,7 @@ export default function HomePage() {
               </p>
             </article>
 
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <article className="card-hover rounded-3xl border border-white/10 bg-white/5 p-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
                 Youth &amp; mental health
               </p>
@@ -286,7 +286,7 @@ export default function HomePage() {
       {/* CTA STRIP */}
       <section>
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
+          <div className="card-hover flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
             <div>
               <h2 className="text-lg font-semibold sm:text-xl">
                 Ready to support community-led change?
@@ -300,13 +300,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center justify-center rounded-full bg-rasta-green px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-green/90"
+                className="inline-flex items-center justify-center rounded-full bg-rasta-green px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition-transform duration-200 hover:-translate-y-0.5 hover:bg-rasta-green/90 hover:shadow-2xl hover:shadow-black/70"
               >
                 Get involved
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-rasta-gold px-7 py-3 text-sm font-medium text-rasta-gold transition hover:bg-rasta-gold hover:text-black"
+                className="inline-flex items-center justify-center rounded-full border border-rasta-gold px-7 py-3 text-sm font-medium text-rasta-gold transition-transform duration-200 hover:-translate-y-0.5 hover:bg-rasta-gold hover:text-black hover:shadow-xl hover:shadow-black/70"
               >
                 Talk to us
               </Link>
