@@ -56,7 +56,10 @@ export default function HomePage() {
   return (
     <div className="bg-black text-white">
       {/* HERO */}
-      <section className="border-b border-white/10">
+      <section
+        className="border-b border-white/10 soft-rasta-bg"
+        data-animate="fade-up"
+      >
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)] lg:items-center">
             <div className="space-y-8">
@@ -98,7 +101,10 @@ export default function HomePage() {
             </div>
 
             {/* Focus pillars card with subtle Rasta gradient */}
-            <div className="space-y-6 rounded-3xl border border-white/10 bg-gradient-to-b from-rasta-red/10 via-black to-rasta-green/10 p-6 backdrop-blur-md">
+            <div
+              className="space-y-6 rounded-3xl border border-white/10 bg-gradient-to-b from-rasta-red/10 via-black to-rasta-green/10 p-6 backdrop-blur-md"
+              data-animate="fade-up"
+            >
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
                 Focus pillars
               </p>
@@ -106,7 +112,7 @@ export default function HomePage() {
                 {pillars.map((pillar, index) => (
                   <div
                     key={pillar.title}
-                    className="rounded-2xl border border-white/10 bg-black/70 p-4"
+                    className="card-hover rounded-2xl border border-white/10 bg-black/70 p-4"
                   >
                     <div className="flex items-center justify-between">
                       <h3 className="text-sm font-semibold">{pillar.title}</h3>
@@ -138,7 +144,7 @@ export default function HomePage() {
       </section>
 
       {/* FEATURED INITIATIVES */}
-      <section className="border-b border-white/10">
+      <section className="border-b border-white/10" data-animate="fade-up">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
@@ -163,7 +169,7 @@ export default function HomePage() {
             {initiatives.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
+                className="card-hover flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
               >
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
@@ -186,7 +192,7 @@ export default function HomePage() {
       </section>
 
       {/* IMPACT SNAPSHOT */}
-      <section className="border-b border-white/10">
+      <section className="border-b border-white/10" data-animate="fade-up">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
@@ -205,7 +211,7 @@ export default function HomePage() {
             {impactStats.map((stat, index) => (
               <div
                 key={stat.label}
-                className="rounded-3xl border border-white/10 bg-black/70 p-5"
+                className="card-hover rounded-3xl border border-white/10 bg-black/70 p-5"
               >
                 <dt className="flex items-center justify-between text-xs text-white/60">
                   <span>{stat.label}</span>
@@ -229,7 +235,7 @@ export default function HomePage() {
       </section>
 
       {/* VOICES FROM THE COMMUNITY */}
-      <section className="border-b border-white/10">
+      <section className="border-b border-white/10" data-animate="fade-up">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -251,7 +257,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <article className="card-hover rounded-3xl border border-white/10 bg-white/5 p-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
                 Digital safety
               </p>
@@ -266,7 +272,7 @@ export default function HomePage() {
               </p>
             </article>
 
-            <article className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <article className="card-hover rounded-3xl border border-white/10 bg-white/5 p-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
                 Youth &amp; mental health
               </p>
@@ -284,9 +290,9 @@ export default function HomePage() {
       </section>
 
       {/* CTA STRIP */}
-      <section>
+      <section data-animate="fade-up">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
+          <div className="card-hover flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
             <div>
               <h2 className="text-lg font-semibold sm:text-xl">
                 Ready to support community-led change?
