@@ -72,20 +72,23 @@ export default function HomePage() {
                 South Sudan and reaching across the continent. Stories, skills,
                 and technology working together for social impact.
               </p>
-              <div className="flex flex-wrap gap-4">
+
+              {/* HERO CTAS */}
+              <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/get-involved"
-                  className="inline-flex items-center justify-center rounded-full border border-white bg-white px-6 py-2 text-sm font-medium text-black no-underline transition hover:bg-black hover:text-white"
+                  className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-white/90"
                 >
                   Support a project
                 </Link>
                 <Link
                   href="/work"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 px-6 py-2 text-sm font-medium text-white/90 no-underline transition hover:border-white hover:text-white"
+                  className="inline-flex items-center justify-center rounded-full border border-white/60 px-7 py-3 text-sm font-medium text-white/90 transition hover:border-white hover:bg-white/10"
                 >
                   Explore our work
                 </Link>
               </div>
+
               <div className="flex flex-wrap gap-4 text-xs text-white/60">
                 <span>Gender equality.</span>
                 <span>Youth voices.</span>
@@ -274,13 +277,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center justify-center rounded-full border border-white bg-white px-6 py-2 text-sm font-medium text-black no-underline transition hover:bg-black hover:text-white"
+                className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-white/90"
               >
                 Get involved
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/60 px-6 py-2 text-sm font-medium text-white/90 no-underline transition hover:border-white hover:text-white"
+                className="inline-flex items-center justify-center rounded-full border border-white/60 px-7 py-3 text-sm font-medium text-white/90 transition hover:border-white hover:bg-white/10"
               >
                 Talk to us
               </Link>
