@@ -109,7 +109,7 @@ const approachSteps = [
 
 export default function WorkPage() {
   return (
-    <div className="bg-black text-white">
+    <div className="page-fade page-fade-in bg-black text-white">
       {/* TOP HERO */}
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -156,7 +156,7 @@ export default function WorkPage() {
               <h2 className="text-xl font-semibold sm:text-2xl">
                 Four pillars, one liberation story.
               </h2>
-              <p className="mt-3 max-w-2xl text-sm text-white/70">
+              <p className="mt-3 max-ww-2xl text-sm text-white/70 md:max-w-2xl">
                 Each pillar is connected. Work in one area strengthens the
                 others. Together, they build safer, healthier, more digital
                 futures in Africa—starting from South Sudan.
@@ -171,7 +171,7 @@ export default function WorkPage() {
             {pillars.map((pillar) => (
               <article
                 key={pillar.key}
-                className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
+                className="card-hover flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
               >
                 <div>
                   <div className="flex items-center justify-between gap-3">
@@ -231,7 +231,7 @@ export default function WorkPage() {
             {sampleInitiatives.map((item) => (
               <article
                 key={item.title}
-                className="flex flex-col justify-between rounded-3xl border border-white/10 bg-black/70 p-5"
+                className="card-hover flex flex-col justify-between rounded-3xl border border-white/10 bg-black/70 p-5"
               >
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
@@ -269,7 +269,7 @@ export default function WorkPage() {
                 sector partner, our approach keeps dignity, agency, and safety
                 at the centre.
               </p>
-              <div className="mt-4 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/25 via-rasta-gold/20 to-rasta-green/25 px-5 py-4 text-xs text-white/80">
+              <div className="card-hover mt-4 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/25 via-rasta-gold/20 to-rasta-green/25 px-5 py-4 text-xs text-white/80">
                 <p className="font-semibold">
                   Looking to collaborate or sponsor a programme?
                 </p>
@@ -300,7 +300,7 @@ export default function WorkPage() {
               {approachSteps.map((step, index) => (
                 <div
                   key={step.step}
-                  className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5"
+                  className="card-hover relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/60">
