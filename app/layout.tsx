@@ -24,7 +24,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <div className="flex min-h-screen flex-col">
           {/* HEADER */}
-          <header className="sticky top-0 z-30 border-b border-white/10 bg-black/80 backdrop-blur">
+          <header className="sticky top-0 z-30 bg-black/90 backdrop-blur">
+            {/* Rasta strip */}
+            <div className="h-0.5 bg-gradient-to-r from-rasta-red via-rasta-gold to-rasta-green" />
+
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
               <Link
                 href="/"
@@ -47,32 +50,41 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <div className="text-sm font-semibold">
                     Savvy GoRilla Foundation
                   </div>
-                  <div className="text-[11px] text-white/60">
+                  <div className="text-[11px] text-white/70">
                     Emerging African voices.
                   </div>
                 </div>
               </Link>
 
               <nav className="hidden items-center gap-6 text-xs font-medium text-white/70 md:flex">
-                <Link href="/about" className="no-underline hover:text-white">
+                <Link
+                  href="/about"
+                  className="no-underline hover:text-rasta-gold"
+                >
                   About
                 </Link>
-                <Link href="/work" className="no-underline hover:text-white">
+                <Link
+                  href="/work"
+                  className="no-underline hover:text-rasta-gold"
+                >
                   Our Work
                 </Link>
                 <Link
                   href="/stories"
-                  className="no-underline hover:text-white"
+                  className="no-underline hover:text-rasta-gold"
                 >
                   Stories &amp; Voices
                 </Link>
                 <Link
                   href="/get-involved"
-                  className="no-underline hover:text-white"
+                  className="no-underline hover:text-rasta-gold"
                 >
                   Get Involved
                 </Link>
-                <Link href="/contact" className="no-underline hover:text-white">
+                <Link
+                  href="/contact"
+                  className="no-underline hover:text-rasta-gold"
+                >
                   Contact
                 </Link>
               </nav>
@@ -90,9 +102,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 ecosystem.
               </p>
               <div className="flex flex-wrap gap-4">
-                <span>Gender equality</span>
-                <span>Youth empowerment</span>
-                <span>Health awareness</span>
+                <span className="text-rasta-red">Gender equality</span>
+                <span className="text-rasta-gold">Youth empowerment</span>
+                <span className="text-rasta-green">Health awareness</span>
                 <span>Digital literacy</span>
               </div>
             </div>

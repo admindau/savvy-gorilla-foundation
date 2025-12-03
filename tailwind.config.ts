@@ -2,10 +2,17 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  // In Tailwind v4 we can rely on automatic content detection,
-  // so no `content` array is needed here.
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        rasta: {
+          red: "#E53935",
+          gold: "#FBC02D",
+          green: "#43A047",
+          dark: "#050505",
+        },
+      },
+    },
   },
   plugins: [],
 };

@@ -60,7 +60,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)] lg:items-center">
             <div className="space-y-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rasta-gold">
                 Savvy GoRilla Foundation
               </p>
               <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
@@ -77,47 +77,60 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/get-involved"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-white/90"
+                  className="inline-flex items-center justify-center rounded-full bg-rasta-gold px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-gold/90"
                 >
                   Support a project
                 </Link>
                 <Link
                   href="/work"
-                  className="inline-flex items-center justify-center rounded-full border border-white/60 px-7 py-3 text-sm font-medium text-white/90 transition hover:border-white hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-full border border-rasta-green px-7 py-3 text-sm font-medium text-rasta-green transition hover:bg-rasta-green hover:text-black"
                 >
                   Explore our work
                 </Link>
               </div>
 
               <div className="flex flex-wrap gap-4 text-xs text-white/60">
-                <span>Gender equality.</span>
-                <span>Youth voices.</span>
-                <span>Digital literacy.</span>
+                <span className="text-rasta-red">Gender equality.</span>
+                <span className="text-rasta-gold">Youth voices.</span>
+                <span className="text-rasta-green">Digital literacy.</span>
                 <span>Pan-African impact.</span>
               </div>
             </div>
 
-            <div className="space-y-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
+            <div className="space-y-6 rounded-3xl border border-white/10 bg-gradient-to-b from-rasta-red/10 via-black to-rasta-green/10 p-6 backdrop-blur-md">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
                 Focus pillars
               </p>
               <div className="space-y-4">
-                {pillars.map((pillar) => (
+                {pillars.map((pillar, index) => (
                   <div
                     key={pillar.title}
-                    className="rounded-2xl border border-white/10 bg-black/40 p-4"
+                    className="rounded-2xl border border-white/10 bg-black/60 p-4"
                   >
-                    <h3 className="text-sm font-semibold">
-                      {pillar.title}
-                    </h3>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-sm font-semibold">
+                        {pillar.title}
+                      </h3>
+                      <span
+                        className={[
+                          'h-1.5 w-10 rounded-full',
+                          index === 0 && 'bg-rasta-red',
+                          index === 1 && 'bg-rasta-gold',
+                          index === 2 && 'bg-rasta-green',
+                          index === 3 && 'bg-white',
+                        ]
+                          .filter(Boolean)
+                          .join(' ')}
+                      />
+                    </div>
                     <p className="mt-2 text-xs text-white/70">
                       {pillar.description}
                     </p>
                   </div>
                 ))}
               </div>
-              <p className="text-[11px] text-white/50">
-                Grounded in South Sudan. Connected to Africa&apos;s wider
+              <p className="text-[11px] text-white/60">
+                Grounded in South Sudan. Rooted in Africa&apos;s liberation
                 story.
               </p>
             </div>
@@ -141,7 +154,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/work"
-              className="text-sm font-medium text-white/80 underline underline-offset-4"
+              className="text-sm font-medium text-rasta-gold underline underline-offset-4"
             >
               View all focus areas
             </Link>
@@ -154,7 +167,7 @@ export default function HomePage() {
                 className="flex flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-5"
               >
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
                     {item.label}
                   </p>
                   <h3 className="mt-2 text-sm font-semibold">
@@ -190,12 +203,25 @@ export default function HomePage() {
           </div>
 
           <dl className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {impactStats.map((stat) => (
+            {impactStats.map((stat, index) => (
               <div
                 key={stat.label}
-                className="rounded-3xl border border-white/10 bg-white/5 p-5"
+                className="rounded-3xl border border-white/10 bg-black/70 p-5"
               >
-                <dt className="text-xs text-white/60">{stat.label}</dt>
+                <dt className="flex items-center justify-between text-xs text-white/60">
+                  <span>{stat.label}</span>
+                  <span
+                    className={[
+                      'h-1.5 w-6 rounded-full',
+                      index === 0 && 'bg-rasta-green',
+                      index === 1 && 'bg-rasta-gold',
+                      index === 2 && 'bg-rasta-red',
+                      index === 3 && 'bg-white',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                  />
+                </dt>
                 <dd className="mt-3 text-2xl font-semibold">
                   {stat.value}
                 </dd>
@@ -221,7 +247,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/stories"
-              className="text-sm font-medium text-white/80 underline underline-offset-4"
+              className="text-sm font-medium text-rasta-gold underline underline-offset-4"
             >
               Explore stories
             </Link>
@@ -229,7 +255,7 @@ export default function HomePage() {
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <article className="rounded-3xl border border-white/10 bg-white/5 p-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
                 Digital safety
               </p>
               <h3 className="mt-2 text-sm font-semibold">
@@ -244,7 +270,7 @@ export default function HomePage() {
             </article>
 
             <article className="rounded-3xl border border-white/10 bg-white/5 p-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rasta-gold">
                 Youth &amp; mental health
               </p>
               <h3 className="mt-2 text-sm font-semibold">
@@ -263,12 +289,12 @@ export default function HomePage() {
       {/* CTA STRIP */}
       <section>
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-white/10 via-white/5 to-transparent px-6 py-8 sm:flex-row sm:items-center sm:px-10">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/15 bg-gradient-to-r from-rasta-red/20 via-rasta-gold/15 to-rasta-green/20 px-6 py-8 sm:flex-row sm:items-center sm:px-10">
             <div>
               <h2 className="text-lg font-semibold sm:text-xl">
                 Ready to support community-led change?
               </h2>
-              <p className="mt-2 max-w-xl text-sm text-white/70">
+              <p className="mt-2 max-w-xl text-sm text-white/80">
                 Partner with us, sponsor a campaign, or share your skills. From
                 storytelling to digital training, there&apos;s always room at
                 the table.
@@ -277,13 +303,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-white/90"
+                className="inline-flex items-center justify-center rounded-full bg-rasta-green px-7 py-3 text-sm font-semibold text-black shadow-lg shadow-black/40 transition hover:bg-rasta-green/90"
               >
                 Get involved
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/60 px-7 py-3 text-sm font-medium text-white/90 transition hover:border-white hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-full border border-rasta-gold px-7 py-3 text-sm font-medium text-rasta-gold transition hover:bg-rasta-gold hover:text-black"
               >
                 Talk to us
               </Link>
